@@ -1,5 +1,5 @@
 # gmail-client
-
+<pre>
 Инструкция по установке
 
 1. Скачайте и распакуйте архивы:
@@ -19,3 +19,4 @@ smart-responder.7z    - исходники
 5. в php.ini разрешите расширения: pdo и imap
 extension=php_pdo_mysql.dll
 extension=php_imap.dll
+</pre>
