@@ -1,42 +1,27 @@
-Инструкция по установке
+РРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ СѓСЃС‚Р°РЅРѕРІРєРµ
 
+1. РЎРєР°С‡Р°Р№С‚Рµ Рё СЂР°СЃРїР°РєСѓР№С‚Рµ Р°СЂС…РёРІС‹:
+smartresponder_db.7z  - Р‘Р”
+smart-responder.7z    - РёСЃС…РѕРґРЅРёРєРё
 
+2. РЎРѕР·РґР°Р№С‚Рµ Р‘Р” РёР· СЃРєСЂРёРїС‚Р° smartresponder.sql 
 
-1. Скачайте и распакуйте архивы:
+3. РЎРѕР·РґР°Р№С‚Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ smartresponder СЃ РїР°СЂРѕР»РµРј smartresponder 
+(РёР»Рё Р·Р°РґР°Р№С‚Рµ РїР°СЂР°РјРµС‚СЂС‹ СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ Р‘Р” РІ С„Р°Р№Р»Рµ config.php)
 
-smartresponder_db.7z  - БД
-
-smart-responder.7z    - исходники
-
-
-
-2. Создайте БД из скрипта smartresponder.sql 
-
-
-
-3. Создайте пользователя smartresponder с паролем smartresponder 
-(или задайте параметры соединения с БД в файле config.php)
-
-
-
-4. Создайте виртуальный хост. Пример записи из httpd-vhosts.conf
-
+4. РЎРѕР·РґР°Р№С‚Рµ РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ С…РѕСЃС‚. РџСЂРёРјРµСЂ Р·Р°РїРёСЃРё РёР· httpd-vhosts.conf
 
 <VirtualHost *:80\>
-
     DocumentRoot "D:\www\vhosts\smart-responder"
-
     ServerName smart-responder
-
 </VirtualHost\>
 
+Р’РѕР·РјРѕР¶РЅРѕ С‡С‚Рѕ Р±СѓРґРµС‚ СЂР°Р±РѕС‚Р°С‚СЊ Рё Р±РµР· РІРёСЂС‚СѓР°Р»СЊРЅРѕРіРѕ С…РѕСЃС‚Р°.
 
+5. РџРѕРґРєР»СЋС‡РёС‚Рµ РІ apache РјРѕРґСѓР»СЊ rewrite_module
 
-Возможно что будет работать и без виртуального хоста.
+LoadModule rewrite_module modules/mod_rewrite.so
 
-5. в php.ini разрешите расширения: pdo и imap
-
-
+6. РІ php.ini СЂР°Р·СЂРµС€РёС‚Рµ СЂР°СЃС€РёСЂРµРЅРёСЏ: pdo Рё imap
 extension=php_pdo_mysql.dll
-
 extension=php_imap.dll
